@@ -3,8 +3,8 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Home</Text>
     </View>
   );
 };
@@ -12,12 +12,12 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  title: {
+    fontSize: 30,
   },
 });
