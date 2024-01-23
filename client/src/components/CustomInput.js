@@ -1,7 +1,14 @@
 import {StyleSheet, Text, View, Image, TextInput} from 'react-native';
 import React from 'react';
 
-const CustomInput = ({value, onChangeText, placeholder, icon, type}) => {
+const CustomInput = ({
+  value,
+  onChangeText,
+  placeholder,
+  icon,
+  type,
+  keyboardType,
+}) => {
   return (
     <View style={styles.container}>
       <Image source={icon} style={styles.img} />
@@ -9,6 +16,7 @@ const CustomInput = ({value, onChangeText, placeholder, icon, type}) => {
         placeholder={placeholder}
         secureTextEntry={type == 'password' ? true : false}
         style={styles.input}
+        keyboardType={keyboardType ? keyboardType : 'default'}
       />
     </View>
   );

@@ -10,8 +10,17 @@ const Signup = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Signup</Text>
       <CustomInput
-        placeholder={'Enter Email ID'}
+        placeholder={'Enter Name'}
+        icon={require('../images/user-interface.png')}
+      />
+      <CustomInput
+        placeholder={'Enter Email id'}
         icon={require('../images/mail.png')}
+      />
+      <CustomInput
+        placeholder={'Enter Mobile Number'}
+        icon={require('../images/mobile-phone.png')}
+        keyboardType={'number-pad'}
       />
       <CustomInput
         placeholder={'Enter Password'}
