@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   signupGo: {
     fontSize: 18,
     fontWeight: '800',
+    marginTop: 20,
     alignSelf: 'center',
   },
 });

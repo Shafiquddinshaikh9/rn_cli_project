@@ -29,7 +29,7 @@ const Signup = () => {
         onPress={() => {
           navigation.navigate('login');
         }}>
-        Create new account?
+        Already have account?
       </Text>
     </View>
   );
@@ -50,5 +50,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '800',
     alignSelf: 'center',
+    marginTop: 20,
   },
 });
