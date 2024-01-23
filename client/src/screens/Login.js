@@ -2,8 +2,10 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
+import {useNavigation} from '@react-navigation/native';
 
 const Login = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
@@ -22,7 +24,13 @@ const Login = () => {
         textColor={'#fff'}
         onPress={() => {}}
       />
-      <Text style={styles.signupGo}></Text>
+      <Text
+        style={styles.signupGo}
+        onPress={() => {
+          navigation.navigate('signup');
+        }}>
+        Create new account?
+      </Text>
     </View>
   );
 };
