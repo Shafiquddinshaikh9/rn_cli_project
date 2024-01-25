@@ -16,6 +16,14 @@ const Carousel = () => {
     require('../images/user-interface.png'),
     require('../images/mobile-phone.png'),
   ];
+
+  const imagecomponent = ({item}) => {
+    return (
+      <View>
+        <Image source={item} />
+      </View>
+    );
+  };
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
@@ -24,14 +32,7 @@ const Carousel = () => {
           data={images}
           horizontal
           pagingEnabled
-          renderItem={({item, index}) => {
-            // return <Text>{item.name}</Text>;
-            return (
-              <View>
-                <Image source={item} />
-              </View>
-            );
-          }}
+          renderItem={<imagecomponent data={data} />}
         />
       </View>
     </SafeAreaView>
